@@ -21,3 +21,13 @@ fn impl_hello_macro(ast: &DeriveInput) -> TokenStream {
     };
     content.into()
 }
+
+#[proc_macro_attribute]
+pub fn custom_attribute(_input: TokenStream, annotated_item: TokenStream) -> TokenStream {
+    annotated_item
+}
+
+#[proc_macro]
+pub fn custom_fn_macro(input: TokenStream) -> TokenStream {
+    input
+}

@@ -1,3 +1,4 @@
 [workspace]
-members = ["demo", "macro_demo", "macro_derive_demo"]
+members = ["bulls_and_cows", "demo", "macro_demo", "macro_derive_demo"]
 resolver = "2"
+default-members = ["bulls_and_cows"]
