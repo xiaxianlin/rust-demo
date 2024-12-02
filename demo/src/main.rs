@@ -1,5 +1,7 @@
+use fib::Recurrence;
 use macro_derive_demo::HelloMacro;
 
+mod fib;
 trait HelloMacro {
     fn hello_macro();
 }
@@ -11,7 +13,8 @@ struct MyStruct;
 struct YourStruct;
 
 fn main() {
-    println!("Hello, world!");
-    MyStruct::hello_macro();
-    YourStruct::hello_macro();
+    let fib = Recurrence::new();
+    for e in fib.take(10) {
+        println!("{}", e)
+    }
 }
