@@ -15,6 +15,7 @@ macro_rules! helper {
 }
 
 pub mod inner {
+
     #[macro_export]
     macro_rules! call_foo {
         () => {
